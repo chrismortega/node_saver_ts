@@ -4,6 +4,7 @@ const nodeExternals = require("webpack-node-externals");
 
 module.exports = {
   entry: ["webpack/hot/poll?100", "./_src/index.ts"],
+  devtool: 'source-map',
   watch: true,
   target: "node",
   externals: [
@@ -28,5 +29,5 @@ module.exports = {
   output: {
     path: path.join(__dirname, "dist"),
     filename: "index.js"
-  }
+  },
 };
