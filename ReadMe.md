@@ -4,6 +4,7 @@
 
 ## To use: 
 * The very first time after cloning, nav to the root and run `npm install`
+* Also the first time after cloning, create the file `.env` at the root, and add `PORT` setting e.g. `PORT=7000`
 * Open a terminal, nav to the root and run `npm run webpack`
     * this will cause a process to monitor the source for changes and repack to `dist/index.js` when they are detected
 * Open a terminal, nav to the root and run `npm start` to run what is in `dist/index.js`
