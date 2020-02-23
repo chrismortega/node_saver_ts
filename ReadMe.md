@@ -12,7 +12,7 @@
 
 ---
 
-## Boilerplate Files and Folders
+## Root Files and Folders
 
 Name | Description
 -----|------------

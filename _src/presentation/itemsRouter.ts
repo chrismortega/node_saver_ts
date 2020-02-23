@@ -28,3 +28,26 @@ itemsRouter.get("/:id", async (req: Request, res: Response) => {
     }
     catch(e) { res.status(404).send(e.message); }
 });
+
+itemsRouter.put("/", async(req: Request, res: Response) => {
+    try {
+        const item: Item = req.body;
+        await ItemRepo.update(item);
+        res.sendStatus(200);
+    }
+    catch(e) { res.status(404).send(e.message); }
+});
+
+itemsRouter.delete("/:id", async(req: Request, res: Response) => {
+    try {
+        const id: number = parseInt(req.params.id, 10);
+        if (id == undefined || id == NaN)
+            throw new Error("invalid id value specified: '" + req.params.id + "'");
+        const item = await ItemRepo.get(id);
+        if (item == undefined)
+            throw new Error("item not found");
+        await ItemRepo.remove(id);
+        res.sendStatus(200);
+    }
+    catch(e) { res.status(404).send(e.message); }
+});

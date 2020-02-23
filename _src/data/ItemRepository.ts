@@ -21,11 +21,13 @@ export const add = async (newItem: Item): Promise<void> => {
   };
 };
 
-export const update = async (updatedItem: Item): Promise<void> => {
-    if (items[updatedItem.id]) {
-      items[updatedItem.id] = updatedItem;
+export const update = async (updateItem: Item): Promise<void> => {
+    if(updateItem == undefined)
+      throw new Error("ItemRepository was asked to update an item but the input was undefined")
+    if (items[updateItem.id]) {
+      items[updateItem.id] = updateItem;
     }
-    else { throw new Error("No record found to update"); }
+    else { throw new Error("Item with id = '" + updateItem.id + "' could not be found to update"); }
 };
 
 export const remove = async (id: number): Promise<void> => {
