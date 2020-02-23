@@ -9,6 +9,7 @@ import { itemsRouter } from "./../_src/presentation/itemsRouter";
 // App Variables
 dotenv.config();
 if (!process.env.PORT) {
+    console.log(`ERROR - .env file must exist at root and must define value for PORT`);
     process.exit(1);  // PORT must be defined in .env
 }
 const PORT: number = parseInt(process.env.PORT as string, 10);
