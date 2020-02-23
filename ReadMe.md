@@ -25,5 +25,6 @@ node_modules/ | imported javascript libraries - dependancies
 package.json | defines both release and dev dependancies, as well as project information and npm scripts
 .env | file to set project settings which can be read from within the application
 .gitignore | file used by git to indicate what should be ignored by source control
+package-lock.json | helps manage the node_modules dependancies
 tsconfig.json | typscript compilation options
 webpack.config.ts | tells webpack where the code is. Includes the hot module replacement plugin to monitor the code for changes and recompile when required
