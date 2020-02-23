@@ -13,5 +13,5 @@ RUN npm install
 
 # copy all the rest of the source to the target directory
 COPY ./ ./
-# now webpack the typescript into a single .js file
+# now use webpack to transpile the TypeScript into a single javascript file
 RUN npm run webpack
