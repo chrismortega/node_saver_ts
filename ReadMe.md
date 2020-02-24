@@ -2,13 +2,22 @@
 
 [Original Post](https://auth0.com/blog/use-typescript-to-create-a-secure-api-with-nodejs-and-express-getting-started/)
 
-## To use: 
+## To Use:
+* After initially cloning, create the file `.env` at the root, and add `PORT` setting e.g. `PORT=3000`
+
+## To use with node.js: 
+* Install node.js
 * The very first time after cloning, nav to the root and run `npm install`
-* Also the first time after cloning, create the file `.env` at the root, and add `PORT` setting e.g. `PORT=7000`
 * Open a terminal, nav to the root and run `npm run webpack`
     * this will cause a process to monitor the source for changes and repack to `dist/index.js` when they are detected
 * Open a terminal, nav to the root and run `npm start` to run what is in `dist/index.js`
     * alternately from vscode just hit `F5` to do the same thing
+
+## Using with Docker
+* Install docker desktop
+* When changes are made to the source run `docker-compose build` to update the docker images
+* From the root directory run `docker-compose up -d`
+* To stop the container(s) run `docker-compose down`
 
 ---
 
@@ -28,3 +37,4 @@ package.json | defines both release and dev dependancies, as well as project inf
 package-lock.json | helps manage the node_modules dependancies
 tsconfig.json | typscript compilation options
 webpack.config.ts | tells webpack where the code is. Includes the hot module replacement plugin to monitor the code for changes and recompile when required
+Dockerfile | configures the creation of each layer of a docker image

@@ -23,7 +23,7 @@ app.use("/items", itemsRouter);
 
 // Server 
 const server = app.listen(PORT, () => {
-    console.log(`Server now listening on port ${PORT}`);
+    console.log(`Welcome! Server now listening on port ${PORT}`);
 });
 
 // Webpack Hot-Module Replacement Activation
