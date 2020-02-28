@@ -10,5 +10,7 @@ RUN npm install
 # RUN npm ci --only=production
 # copy all the rest of the source to the target directory
 COPY ./ ./
+# use sed command to update webpack config so that it doesn't watch
+RUN sed -i "s/watch: true/watch: false/" webpack.config.ts
 # now use webpack to transpile the TypeScript into a single javascript file
 RUN npm run webpack
