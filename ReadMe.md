@@ -8,6 +8,7 @@
 ## To use with node.js: 
 * Install node.js
 * The very first time after cloning, nav to the root and run `npm install`
+* Open the webpack.config.ts file and set the value of 'watch' to 'true'
 * Open a terminal, nav to the root and run `npm run webpack`
     * this will cause a process to monitor the source for changes and repack to `dist/index.js` when they are detected
 * Open a terminal, nav to the root and run `npm start` to run what is in `dist/index.js`
